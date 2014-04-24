@@ -1,0 +1,194 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="css/general-sitio-personal.css" rel="stylesheet" type="text/css">
+<!-- slide inicio -->
+<link rel="stylesheet" type="text/css" href="Slicebox/css/demo.css" />
+<link rel="stylesheet" type="text/css" href="Slicebox/css/slicebox.css" />
+<link rel="stylesheet" type="text/css" href="Slicebox/css/custom.css" />
+<script type="text/javascript" src="Slicebox/js/modernizr.custom.46884.js"></script>
+<!-- slide fin -->
+<!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+</head>
+<body>
+<div class="gridContainer clearfix">
+  <div id="LayoutDiv1">
+    <div id="banner"><img src="img/logotipo-fanny-nuevo baner.png" alt="Logotipo Personal"><img src="img/puntos-banner.png" name="puntosbanner" id="puntosbanner"><p><b>Diseños</b><br> A TU MEDIDA</p>
+      <ul id="menu">
+        <li><img src="img/home-primer-estado.png" alt="Home" height="30px"> <!--Inicio--></li>
+        <li><img src="img/quien-soy-primer-estado.png" alt="¿Quién soy?" height="30px"><!--¿Quien Soy?--></li>
+        <li><img src="img/portafolio-primer-estado.png" alt="Portafolio" height="30px"> <!--Mi Portafolio--></li>
+        <li><img src="img/contacto-primer-estado.png" alt="Contáctame" height="30px"><!--Contáctame--></li>
+      </ul>
+    </div>
+  </div>
+  <div id="fondo">
+  <div id="Contenido">
+    <div id="slide">
+    	<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2969141180" target="_blank"><img src="Slicebox/images/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Creative Lifesaver</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968268187" target="_blank"><img src="Slicebox/images/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3>Honest Entertainer</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968114825" target="_blank"><img src="Slicebox/images/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Brave Astronaut</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968122059" target="_blank"><img src="Slicebox/images/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Affectionate Decision Maker</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2969119944" target="_blank"><img src="Slicebox/images/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Faithful Investor</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968126177" target="_blank"><img src="Slicebox/images/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Groundbreaking Artist</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.flickr.com/photos/strupler/2968945158" target="_blank"><img src="Slicebox/images/7.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Selfless Philantropist</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+			</div><!-- /wrapper -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="Slicebox/js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+    </div>
+    <div id="submenu">
+      <ul>
+        <li id="ayuda">
+          <h3>¿Cómo puedo ayudarte?</h3>
+        <p>Como Diseñador gráfico y Desarrollador Web, puedo crear soluciones que te ayudarán a tí y a tu empresa a:</p>
+
+        <p>Vender más...<br>
+        Atraer nuevos clientes...<br>
+        Mejorar su imagen...<br>
+        Trabajar más eficientemente...<br>
+        Reducir costos...<br>
+        Ahorrar tiempo...<br>
+        Y mucho más..</p>
+        </li>
+        <li id="elegirme">
+        <h3>¿Por qué elegirme?</h3>
+        <p>La alta calidad y originalidad de mis trabajos es un sello personal que busco plasmar en cada uno de los proyectos que desarrollo.</p>
+
+				<p>Me gusta involucrándome y conocer las necesidades reales de cada cliente para así ser el mejor aliado frente al mercado, ya sea optimizando sus recursos o potenciando sus ingresos.</p>
+        </li>
+        <li id="contactarme">
+        <h3>¿Cómo contactarme?</h3>
+        <ul>
+           <li id="uno"><img src="img/facebook.png" alt="Facebook"> <img src="img/twitter.png" alt="Twitter" > <img src="img/instagram.png" alt="Instagram" >  </li>
+            <li class="redesmargen"><img src="img/telefonos.png" alt="Teléfonos" > <img src="img/correo.png" alt="E-mail" > </li>
+            <li class="redesmargen"><img src="img/direccion.png" alt="Dirección de Oficina"> </li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+   <div id="piedepagina">Diseñado y desarrolado por Fanny Mogollón. Todos los derechos reservados. 2013</div>
+</div>
+  </div>
+  </div>
+  </body>
+</html>
